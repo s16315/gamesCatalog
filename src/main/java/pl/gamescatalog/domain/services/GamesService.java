@@ -7,6 +7,10 @@ import java.util.List;
 public class GamesService implements IGamesService<Game> {
     private List<Game> gamesList;
 
+    GamesService(List<Game> gamesList) {
+        this.gamesList = gamesList;
+    }
+
     public int create(Game game) {
         return 0;
     }
@@ -26,4 +30,5 @@ public class GamesService implements IGamesService<Game> {
     public void delete(Game game) {
 
     }
+
 }
