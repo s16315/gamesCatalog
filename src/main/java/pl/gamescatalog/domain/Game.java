@@ -3,12 +3,22 @@ package pl.gamescatalog.domain;
 public class Game extends Entity {
     private String name;
     private Number pegi;
-    private String type;
+    private Boolean haveDemo;
+    private String description;
 
-    public Game(String name, Number pegi, String type, int id) {
+    public Game(String name, Number pegi, double id) {
         this.name = name;
         this.pegi = pegi;
-        this.type = type;
+        this.haveDemo = false;
+        this.description = "";
+        this.setId(id);
+    }
+
+    public Game(String name, Number pegi, Boolean haveDemo, String description, double id) {
+        this.name = name;
+        this.pegi = pegi;
+        this.haveDemo = haveDemo;
+        this.description = description;
         this.setId(id);
     }
 
@@ -28,11 +38,19 @@ public class Game extends Entity {
         this.pegi = pegi;
     }
 
-    public String getType() {
-        return type;
+    public Boolean getHaveDemo() {
+        return haveDemo;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setHaveDemo(Boolean haveDemo) {
+        this.haveDemo = haveDemo;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

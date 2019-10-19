@@ -1,13 +1,12 @@
 package pl.gamescatalog.domain;
 
 public abstract class Entity {
-    private int id;
+    private double id;
 
-    public int getId() {
+    public double getId() {
         return id;
     }
-
-    public void setId(int id) {
+    void setId(double id) {
         this.id = id;
     }
 }
