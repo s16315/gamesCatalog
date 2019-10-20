@@ -2,21 +2,21 @@ package pl.gamescatalog.domain;
 
 public class Game extends Entity {
     private String name;
-    private Number pegi;
+    private Integer pegi;
     private Boolean haveDemo;
     private String description;
 
-    public Game(String name, Number pegi, double id) {
+    public Game(String name, Integer pegi, double id) {
         this.name = name;
-        this.pegi = pegi;
+        this.setPegi(pegi);
         this.haveDemo = false;
         this.description = "";
         this.setId(id);
     }
 
-    public Game(String name, Number pegi, Boolean haveDemo, String description, double id) {
+    public Game(String name, Integer pegi, Boolean haveDemo, String description, double id) {
         this.name = name;
-        this.pegi = pegi;
+        this.setPegi(pegi);
         this.haveDemo = haveDemo;
         this.description = description;
         this.setId(id);
@@ -34,7 +34,8 @@ public class Game extends Entity {
         return pegi;
     }
 
-    public void setPegi(Number pegi) {
+    public void setPegi(Integer pegi) {
+        if (pegi < 0 || pegi > 18) throw new IllegalArgumentException("Incorrect PEGI!");
         this.pegi = pegi;
     }
 

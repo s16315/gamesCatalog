@@ -1,10 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: pl.gamescatalog.domain.services.GamesServiceTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.026 sec <<< FAILURE!
-create(pl.gamescatalog.domain.services.GamesServiceTest)  Time elapsed: 0.009 sec  <<< ERROR!
-java.lang.NullPointerException
-	at pl.gamescatalog.domain.services.GamesServiceTest.setUp(GamesServiceTest.java:16)
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.027 sec <<< FAILURE!
+shouldHaveProperErrorMessageOnReadByIdNotExistingGame(pl.gamescatalog.domain.services.GamesServiceTest)  Time elapsed: 0.006 sec  <<< ERROR!
+java.lang.NoSuchMethodError: pl.gamescatalog.domain.Game.<init>(Ljava/lang/String;Ljava/lang/Number;D)V
+	at pl.gamescatalog.domain.services.GamesServiceTest.setUp(GamesServiceTest.java:18)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -35,9 +35,9 @@ java.lang.NullPointerException
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-delete(pl.gamescatalog.domain.services.GamesServiceTest)  Time elapsed: 0 sec  <<< ERROR!
-java.lang.NullPointerException
-	at pl.gamescatalog.domain.services.GamesServiceTest.setUp(GamesServiceTest.java:16)
+shouldHaveProperErrorMessageOnUpdateGameWithNotExistingId(pl.gamescatalog.domain.services.GamesServiceTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.NoSuchMethodError: pl.gamescatalog.domain.Game.<init>(Ljava/lang/String;Ljava/lang/Number;D)V
+	at pl.gamescatalog.domain.services.GamesServiceTest.setUp(GamesServiceTest.java:18)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -68,9 +68,9 @@ java.lang.NullPointerException
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-readById(pl.gamescatalog.domain.services.GamesServiceTest)  Time elapsed: 0 sec  <<< ERROR!
-java.lang.NullPointerException
-	at pl.gamescatalog.domain.services.GamesServiceTest.setUp(GamesServiceTest.java:16)
+shouldHaveProperErrorMessageOnCreateGameWithIncorrectPEGI(pl.gamescatalog.domain.services.GamesServiceTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NoSuchMethodError: pl.gamescatalog.domain.Game.<init>(Ljava/lang/String;Ljava/lang/Number;D)V
+	at pl.gamescatalog.domain.services.GamesServiceTest.setUp(GamesServiceTest.java:18)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -101,9 +101,9 @@ java.lang.NullPointerException
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-update(pl.gamescatalog.domain.services.GamesServiceTest)  Time elapsed: 0 sec  <<< ERROR!
-java.lang.NullPointerException
-	at pl.gamescatalog.domain.services.GamesServiceTest.setUp(GamesServiceTest.java:16)
+shouldHaveProperErrorMessageOnDeleteGameWithNotExistingId(pl.gamescatalog.domain.services.GamesServiceTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NoSuchMethodError: pl.gamescatalog.domain.Game.<init>(Ljava/lang/String;Ljava/lang/Number;D)V
+	at pl.gamescatalog.domain.services.GamesServiceTest.setUp(GamesServiceTest.java:18)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -134,9 +134,9 @@ java.lang.NullPointerException
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-readAll(pl.gamescatalog.domain.services.GamesServiceTest)  Time elapsed: 0 sec  <<< ERROR!
-java.lang.NullPointerException
-	at pl.gamescatalog.domain.services.GamesServiceTest.setUp(GamesServiceTest.java:16)
+shouldHaveProperErrorMessageOnCreateGameWithExistingId(pl.gamescatalog.domain.services.GamesServiceTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NoSuchMethodError: pl.gamescatalog.domain.Game.<init>(Ljava/lang/String;Ljava/lang/Number;D)V
+	at pl.gamescatalog.domain.services.GamesServiceTest.setUp(GamesServiceTest.java:18)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)

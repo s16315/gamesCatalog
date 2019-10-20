@@ -1,5 +1,4 @@
 package pl.gamescatalog.domain.services;
-
 import pl.gamescatalog.domain.Game;
 
 import java.util.List;
@@ -15,12 +14,13 @@ public class GamesService implements IGamesService<Game> {
         return 0;
     }
 
-    public void readAll() {
-
+    public List<Game> readAll() {
+        return this.gamesList;
     }
 
-    public void readById(int id) {
-
+    public Game readById(int id) {
+        //Game game = gamesList.stream().filter(g -> g.getId() == id).findFirst();
+        return game;
     }
 
     public void update(Game game) {
