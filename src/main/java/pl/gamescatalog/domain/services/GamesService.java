@@ -30,8 +30,7 @@ public class GamesService implements IGamesService<Game> {
                 return g;
             }
         }
-        return null;
-        //throw new IllegalArgumentException("Not existing Id!");
+        throw new IllegalArgumentException("Not existing Id!");
     }
 
     public void update(Game game) {

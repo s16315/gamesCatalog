@@ -19,7 +19,6 @@ public class GamesServiceTest {
     private Game game2 = new Game("Minecraft", 3, 2);
     private Game game3 = new Game("Snail Bob 1", 3, 3);
     private Game game4 = new Game("Snail Bob 2", 3, 4);
-    public ExpectedException thrown= ExpectedException.none();
 
     @Before
     public void setUp() {
@@ -32,14 +31,8 @@ public class GamesServiceTest {
 
 
     @Test(expected = IllegalArgumentException.class)
-    public void shouldHaveProperErrorMessageOnCreateGameWithExistingId() {
-        try {
-            gamesService.create(this.game1);
-            fail("Exception wasn't thrown!");
-        }
-        catch (IllegalArgumentException exception) {
-            assertEquals("Existing Id!", exception.getMessage());
-        }
+    public void shouldBeIllegalArgumentExceptionOnCreateGameWithExistingId() {
+        gamesService.create(this.game1);
     }
 
     @Test
@@ -56,16 +49,10 @@ public class GamesServiceTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void shouldHaveProperErrorMessageOnCreateGameWithIncorrectPEGI() {
-        try {
-            gamesService.create(new Game("Snail Bob", -1,10));
-            gamesService.create(new Game("Snail Bob", 19,11));
-            gamesService.create(new Game("Snail Bob", 50,12));
-            fail("Exception wasn't thrown!");
-        }
-        catch (IllegalArgumentException exception) {
-            assertEquals("Incorrect PEGI!", exception.getMessage());
-        }
+    public void shouldBeIllegalArgumentExceptionOnCreateGameWithIncorrectPEGI() {
+        gamesService.create(new Game("Snail Bob", -1,10));
+        gamesService.create(new Game("Snail Bob", 19,11));
+        gamesService.create(new Game("Snail Bob", 50,12));
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -75,46 +62,18 @@ public class GamesServiceTest {
 
 
     @Test(expected = IllegalArgumentException.class)
-    public void shouldHaveProperErrorMessageOnDeleteGameWithNotExistingIdOLD() {
-        try {
-            gamesService.create(this.game1);
-            fail("Exception wasn't thrown!");
-        }
-        catch (IllegalArgumentException exception) {
-            assertThat(exception.getMessage(), containsString("Existing Id!"));
-
-            //System.out.println(exception.getMessage());
-            //String t1 = new String(exception.getMessage());
-            //String t2 = new String("Existing Id!");
-            //assertEquals(new IllegalArgumentException("Existing Id!").getMessage(), exception.getMessage());
-            //assertSame(t1, t2);
-            //System.out.println(t1.equals(t2));
-            //assertEquals( t1, t2);
-            //assertEquals( "Existing Id!", new String(exception.getMessage()));
-        }
+    public void shouldBeIllegalArgumentExceptionOnOnDeleteGameWithNotExistingIdOLD() {
+        gamesService.create(this.game1);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void shouldHaveProperErrorMessageOnUpdateGameWithNotExistingId() {
-        try {
+    public void shouldBeIllegalArgumentExceptionOnOnUpdateGameWithNotExistingId() {
             gamesService.update(new Game("Snail Bob", 3, 7000));
-            fail("Exception wasn't thrown!");
-        }
-        catch (IllegalArgumentException exception) {
-            assertEquals("Not existing Id!", exception.getMessage());
-        }
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void shouldHaveProperErrorMessageOnReadByIdNotExistingGame() {
-
-        try {
-            gamesService.update(new Game("Snail Bob", 3, 7000));
-            fail("Exception wasn't thrown!");
-        }
-        catch (IllegalArgumentException exception) {
-            assertEquals("There is no game with this ID!", exception.getMessage());
-        }
+    public void shouldBeIllegalArgumentExceptionOnReadByIdNotExistingGame() {
+        gamesService.update(new Game("Snail Bob", 3, 7000));
     }
 
 }
